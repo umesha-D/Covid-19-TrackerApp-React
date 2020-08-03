@@ -102,7 +102,7 @@ class App extends Component {
             
           </div>
 
-          <div className="col s12 m4 l3">
+          {/* <div className="col s12 m4 l3">
             <h5 className="center">Live cases</h5>
             <table className="striped">
               <tbody>
@@ -126,7 +126,7 @@ class App extends Component {
                 })}
               </tbody>
             </table>
-          </div>
+          </div> */}
         </div>
       </React.Fragment>
     );
