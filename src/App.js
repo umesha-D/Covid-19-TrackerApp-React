@@ -66,31 +66,7 @@ class App extends Component {
       <React.Fragment>
         <Navbar />
         <div className="row">
-          <div className="col s12 m4 l3">
-            <h5 className="center">Live cases</h5>
-            <table className="striped">
-              <tbody>
-                {[
-                  ...this.state.countries
-                    .sort((a, b) => {
-                      if (a.cases > b.cases) {
-                        return -1;
-                      } else {
-                        return 1;
-                      }
-                    })
-                    .slice(0, 15),
-                ].map((country, index) => {
-                  return (
-                    <tr key={index}>
-                      <td>{country.name}</td>
-                      <td>{country.cases}</td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
+          
 
           <div className="col s12 m8 l9">
             <select name="" id="" onChange={this.getCountry}>
@@ -124,6 +100,32 @@ class App extends Component {
               />
             </div>
             
+          </div>
+
+          <div className="col s12 m4 l3">
+            <h5 className="center">Live cases</h5>
+            <table className="striped">
+              <tbody>
+                {[
+                  ...this.state.countries
+                    .sort((a, b) => {
+                      if (a.cases > b.cases) {
+                        return -1;
+                      } else {
+                        return 1;
+                      }
+                    })
+                    .slice(0, 15),
+                ].map((country, index) => {
+                  return (
+                    <tr key={index}>
+                      <td>{country.name}</td>
+                      <td>{country.cases}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
           </div>
         </div>
       </React.Fragment>
