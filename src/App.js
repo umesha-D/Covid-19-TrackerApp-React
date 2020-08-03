@@ -74,6 +74,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <Navbar />
+	<br />
         <div className="row">
           
 
@@ -113,7 +114,7 @@ class App extends Component {
 
           <div className="col s12 m4 l3">
             <h5 className="center">Live cases</h5>
-            <table className="striped center">
+            <table className="striped">
               <tbody>
                 {[
                   ...this.state.tableData
@@ -128,8 +129,8 @@ class App extends Component {
                 ].map((country, index) => {
                   return (
                     <tr key={index}>
-                      <td>{country.name}</td>
-                      <td>{country.cases}</td>
+                      <td className="center center-align">{country.name}</td>
+                      <td className="center center-align">{country.cases}</td>
                     </tr>
                   );
                 })}
