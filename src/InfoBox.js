@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "materialize-css/dist/css/materialize.min.css";
-import M from "materialize-css";
+
+
 
 class InfoBox extends Component {
   constructor(props) {
@@ -8,25 +8,23 @@ class InfoBox extends Component {
     this.state = {};
   }
 
+  getStyle = () => {
+    return {
+      border:"5px solid",
+      width: "fit-content",
+      borderRadius: "15px",
+      padding:"20px",
+      marginLeft:"20px"
+    }
+  }
+
+
   render() {
     return (
-      <div class="row">
-        <div class="col s12 m6">
-          <div class="card blue-grey darken-1">
-            <div class="card-content white-text">
-              <span class="card-title">Card Title</span>
-              <p>
-                I am a very simple card. I am good at containing small bits of
-                information. I am convenient because I require little markup to
-                use effectively.
-              </p>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-              <a href="#">This is a link</a>
-            </div>
-          </div>
-        </div>
+      <div className="container" style={this.getStyle()}>
+        <h6>{this.props.title}</h6>
+        <p>Cases: {this.props.cases}</p>
+        <p>{this.props.total}</p>
       </div>
     );
   }
