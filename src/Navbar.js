@@ -19,43 +19,21 @@ class Navbar extends Component {
     return (
       <React.Fragment>
         <nav>
-          <div className="nav-wrapper grey darken-3">
-            <a href="#!" className="brand-logo">
+          <div className="nav-wrapper teal">
+            <a href="#!" className="brand-logo hide-on-small-only">
               COVID-19 Tracker
             </a>
             <a href="#" data-target="mobile-demo" className="sidenav-trigger">
               <i className="material-icons">menu</i>
             </a>
             <ul className="right hide-on-med-and-down">
-              <li>
-                <a href="sass.html">Sass</a>
-              </li>
-              <li>
-                <a href="badges.html">Components</a>
-              </li>
-              <li>
-                <a href="collapsible.html">Javascript</a>
-              </li>
-              <li>
-                <a href="mobile.html">Mobile</a>
-              </li>
+              
             </ul>
           </div>
         </nav>
 
         <ul className="sidenav" id="mobile-demo">
-          <li>
-            <a href="sass.html">Sass</a>
-          </li>
-          <li>
-            <a href="badges.html">Components</a>
-          </li>
-          <li>
-            <a href="collapsible.html">Javascript</a>
-          </li>
-          <li>
-            <a href="mobile.html">Mobile</a>
-          </li>
+          
         </ul>
       </React.Fragment>
     );

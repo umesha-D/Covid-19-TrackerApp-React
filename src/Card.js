@@ -8,12 +8,12 @@ class Card extends Component {
 
   render() {
     return (
-      <div className="col s12 m4">
+      <div className="col s12 m4 center">
         <div className="card-panel">
-          <i className="material-icons large teal-text">fitness_center</i>
-          <h3>{this.props.title}</h3>
-          <h4 style={{color:"red"}}>+{this.props.total}</h4>
-          <h5>{this.props.total} Total</h5>
+        <i className="material-icons large teal-text">{this.props.icon}</i>
+          <h5>{this.props.title}</h5>
+          <h5 style={{color:"red"}}>+{this.props.today}</h5>
+          <h6>{this.props.total} Total</h6>
         </div>
       </div>
     );
