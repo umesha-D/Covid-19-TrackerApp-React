@@ -5,7 +5,6 @@ import M from "materialize-css";
 
 import Navbar from "./Navbar";
 import Card from "./Card";
-import MapImage from "./MapImage";
 
 class App extends Component {
   constructor() {

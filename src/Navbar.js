@@ -23,7 +23,7 @@ class Navbar extends Component {
             <a href="#!" className="brand-logo hide-on-small-only">
               COVID-19 Tracker
             </a>
-            <a href="#" data-target="mobile-demo" className="sidenav-trigger">
+            <a href="#!" data-target="mobile-demo" className="sidenav-trigger">
               <i className="material-icons">menu</i>
             </a>
             <ul className="right hide-on-med-and-down">
