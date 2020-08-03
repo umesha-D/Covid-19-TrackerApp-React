@@ -13,6 +13,7 @@ class App extends Component {
       countries: [],
       country: "worldwide",
       countryInfo: {},
+      tableData: []
     };
   }
 
@@ -32,7 +33,15 @@ class App extends Component {
         cases: country.cases,
       };
     });
+    const table = result.map((country) => {
+      return {
+        name: country.country,
+        cases: country.cases,
+      };
+    });
+    this.setState({ tableData: table });
     this.setState({ countries: countries });
+    
 
     var elems = document.querySelectorAll("select");
     M.FormSelect.init(elems);
@@ -102,12 +111,12 @@ class App extends Component {
             
           </div>
 
-          {/* <div className="col s12 m4 l3">
+          <div className="col s12 m4 l3">
             <h5 className="center">Live cases</h5>
             <table className="striped">
               <tbody>
                 {[
-                  ...this.state.countries
+                  ...this.state.tableData
                     .sort((a, b) => {
                       if (a.cases > b.cases) {
                         return -1;
@@ -126,7 +135,7 @@ class App extends Component {
                 })}
               </tbody>
             </table>
-          </div> */}
+          </div>
         </div>
       </React.Fragment>
     );
